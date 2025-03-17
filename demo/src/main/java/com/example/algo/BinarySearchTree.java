@@ -1,5 +1,29 @@
 package com.example.algo;
 
+/**
+ * 
+ * 時間複雜度: (平均 / 最差)
+ *  插入: O(logn) / O(n)
+ * 	搜尋: O(logn) / O(n)
+ *  刪除: O(logn) / O(n)
+ * 
+ * BST特性:
+ *  左子節點的值小於父節點
+ *  右子節點的值大於父節點
+ *  左右子樹也都是二元搜尋數
+ *  
+ * 優點:
+ *  搜尋效率高
+ *  支援動態新增/刪除
+ *  可取得排序後的資料
+ *  
+ * 缺點:
+ *  若輸入順序不當，會退化成LinkList
+ *  不平衡時的效率會降低
+ *  不支援重複值(需特殊處理)
+ *  
+ * */
+
 public class BinarySearchTree {
 	
 	private class Node {

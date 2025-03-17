@@ -3,6 +3,27 @@ package Tries;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 時間複雜度 (m:單字長度 / n:前綴長度)
+ *  插入 : O(m)
+ *  搜尋 : O(m)
+ *  刪除 : O(m)
+ *  前綴搜尋 : O(p)
+ *  
+ *  
+ * 優點:
+ *  支援快速的前綴搜尋
+ *  節省空間(共享前綴)
+ *  支援字典序遍歷
+ * 
+ * 缺點:
+ * 	需要較多記憶體
+ *  不適合精確字串匹配
+ *  建構成本較高
+ * 
+ * */
+
+
 public class Trie {
 private TrieNode root;
     
