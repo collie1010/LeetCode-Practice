@@ -45,6 +45,27 @@ public class TrieTest {
         System.out.println("\n===刪除後的所有單字===");
         allWords = trie.getAllWords();
         System.out.println(allWords);
+        
+        Trie trie2 = new Trie();
+        
+        // 插入測試資料
+        String[] words = {"sad", "sam", "same", "sap", "a", "awls"};
+        for (String word : words) {
+            trie2.insert(word);
+        }
+        
+        // 測試不同前綴
+        testPrefix(trie2, "sa");    // 預期: [sad, sam, same, sap]
+        testPrefix(trie2, "sam");   // 預期: [sam, same]
+        testPrefix(trie2, "a");     // 預期: [a, awls]
+        testPrefix(trie2, "x");     // 預期: []
+        testPrefix(trie2, "sap");   // 預期: [sap]
+    }
+    
+    private static void testPrefix(Trie trie, String prefix) {
+        System.out.println("\n測試前綴 '" + prefix + "':");
+        List<String> result = trie.keysWithPrefix(prefix);
+        System.out.println("結果: " + result);
     }
 }
 

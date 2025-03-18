@@ -158,4 +158,56 @@ private TrieNode root;
         }
         return count;
     }
+    
+ // 尋找具有特定前綴的所有鍵值
+    public List<String> keysWithPrefix(String prefix) {
+        List<String> result = new ArrayList<>();
+        
+        // 找到前綴對應的節點
+        TrieNode prefixNode = findNode(prefix);
+        if (prefixNode == null) {
+            return result;
+        }
+        
+        // 如果前綴本身就是一個完整的單字，加入結果
+        if (prefixNode.isEndOfWord()) {
+            result.add(prefix);
+        }
+        
+        // 收集所有以該前綴開始的單字
+        collectWords(prefixNode, prefix, result);
+        
+        return result;
+    }
+    
+    // 尋找前綴對應的節點
+    private TrieNode findNode(String prefix) {
+        TrieNode current = root;
+        for (char c : prefix.toLowerCase().toCharArray()) {
+            int index = c - 'a';
+            if (current.getChildren()[index] == null) {
+                return null;
+            }
+            current = current.getChildren()[index];
+        }
+        return current;
+    }
+    
+    // 遞迴收集所有單字
+    private void collectWords(TrieNode node, String prefix, List<String> result) {
+        TrieNode[] children = node.getChildren();
+        
+        for (int i = 0; i < children.length; i++) {
+            if (children[i] != null) {
+                char c = (char) ('a' + i);
+                String newPrefix = prefix + c;
+                
+                if (children[i].isEndOfWord()) {
+                    result.add(newPrefix);
+                }
+                
+                collectWords(children[i], newPrefix, result);
+            }
+        }
+    }
 }
