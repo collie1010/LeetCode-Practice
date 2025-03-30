@@ -1,5 +1,13 @@
 package Sort;
 
+/**
+ * 
+ * 時間複雜度: O(d*n) (d: 最大數字的位數 / n: 陣列長度)
+ * 空間複雜度: O(n + k) (k是基數)
+ * 穩定性: True
+ *  
+ */
+
 public class RadixSort {
 	public static void radixSort(int[] arr) {
         if (arr == null || arr.length <= 1) {

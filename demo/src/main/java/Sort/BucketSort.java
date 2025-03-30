@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * 
+ * 時間複雜度: O(n + k) (k為桶子數量)
+ * 空間複雜度: O(n + k) 
+ * 穩定性: True
+ *  
+ */
+
 public class BucketSort {
 	public static void bucketSort(int[] arr) {
         if (arr == null || arr.length <= 1) {
