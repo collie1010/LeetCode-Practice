@@ -1,5 +1,13 @@
 package Sort;
 
+/**
+ * 
+ * 時間複雜度: O(n*n) 
+ * 空間複雜度: O(1)
+ * 穩定性: True
+ * 
+ * */
+
 public class InsertionSort {
     
     // 插入排序方法

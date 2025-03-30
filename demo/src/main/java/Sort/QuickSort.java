@@ -1,5 +1,13 @@
 package Sort;
 
+/**
+ * 
+ * 時間複雜度: 平均: O(n*log(n)) / 最差: O(n*n)  
+ * 空間複雜度: O(log(n))
+ * 穩定性: False
+ * 
+ * */
+
 public class QuickSort {
 	
 	 // 快速排序的主要方法

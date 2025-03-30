@@ -1,5 +1,13 @@
 package Sort;
 
+/**
+ * 
+ * 時間複雜度: O(n*log(n)) 
+ * 空間複雜度: O(n)
+ * 穩定性: True
+ * 
+ * */
+
 public class MergeSort {
 	 // 合併排序的主要方法
     public static void mergeSort(int[] arr) {
