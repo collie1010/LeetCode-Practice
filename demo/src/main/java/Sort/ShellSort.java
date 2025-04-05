@@ -1,5 +1,18 @@
 package Sort;
 
+/**
+ * 
+ * 時間複雜度: 平均: 小於O(n*n) / 最差: O(n*n)  
+ * 空間複雜度: O(log(n))
+ * 穩定性: False
+ * 
+ * 可以視為 InsertionSort 的改良版
+ * 可減少 InsertionSort 的資料搬移次數
+ * 加入 gap 將資料分成多個區塊，再將不同區塊進行InsertionSort
+ * 每一回合的 gap 會逐漸減少，最後收斂至1
+ *  
+ * */
+
 public class ShellSort {
     public void shellSort(int[] array) {
         int n = array.length;

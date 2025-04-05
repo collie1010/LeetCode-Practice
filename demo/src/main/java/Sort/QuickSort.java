@@ -6,6 +6,15 @@ package Sort;
  * 空間複雜度: O(log(n))
  * 穩定性: False
  * 
+ * 最差的情境包含:
+ *  - 幾乎已經排序完畢
+ *  - 所有元素皆為相同
+ * 
+ * 避免出現最差的情境:
+ *  - 隨機選取pivot
+ *  - 在排序前先進行shuffle  
+ *  - 選取陣列中的中位數作為pivot
+ *  
  * */
 
 public class QuickSort {
