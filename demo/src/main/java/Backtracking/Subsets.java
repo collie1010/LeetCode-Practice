@@ -7,7 +7,6 @@ import java.util.List;
 public class Subsets {
 
 	public List<List<Integer>> subsets(int[] nums) {
-
 		List<List<Integer>> result = new ArrayList<>();
 		Arrays.sort(nums);
 		backTrack(nums, 0, new ArrayList<>(), result);
