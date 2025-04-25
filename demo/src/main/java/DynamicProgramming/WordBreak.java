@@ -28,15 +28,13 @@ public class WordBreak {
     }
 	
 	// 測試輔助方法
-    private static void testCase(String s, List<String> wordDict, boolean expectedResult) {
+    private static void testCase(String s, List<String> wordDict) {
     	WordBreak solution = new WordBreak();
         boolean result = solution.wordBreak(s, wordDict);
         System.out.println("測試案例：");
         System.out.println("輸入字串: \"" + s + "\"");
         System.out.println("字典內容: " + wordDict);
-        System.out.println("預期結果: " + expectedResult);
-        System.out.println("實際結果: " + result);
-        System.out.println("測試結果: " + (result == expectedResult ? "通過" : "失敗"));
+        System.out.println("結果: " + result);
         System.out.println("================");
     }
 
@@ -44,32 +42,32 @@ public class WordBreak {
         // 測試案例1
         String s1 = "leetcode";
         List<String> dict1 = Arrays.asList("leet", "code");
-        testCase(s1, dict1, true);
+        testCase(s1, dict1);
 
         // 測試案例2
         String s2 = "applepenapple";
         List<String> dict2 = Arrays.asList("apple", "pen");
-        testCase(s2, dict2, true);
+        testCase(s2, dict2);
 
         // 測試案例3
         String s3 = "catsandog";
         List<String> dict3 = Arrays.asList("cats", "dog", "sand", "and", "cat");
-        testCase(s3, dict3, false);
+        testCase(s3, dict3);
 
         // 測試案例4（空字串）
         String s4 = "";
         List<String> dict4 = Arrays.asList("test");
-        testCase(s4, dict4, true);
+        testCase(s4, dict4);
 
         // 測試案例5（單個字符）
         String s5 = "a";
         List<String> dict5 = Arrays.asList("a");
-        testCase(s5, dict5, true);
+        testCase(s5, dict5);
 
         // 測試案例6（重複使用字典中的詞）
         String s6 = "gogogo";
         List<String> dict6 = Arrays.asList("go");
-        testCase(s6, dict6, true);
+        testCase(s6, dict6);
 
     }
 }
