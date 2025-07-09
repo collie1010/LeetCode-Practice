@@ -1,5 +1,7 @@
 package TwoPointer;
 
+import java.util.Arrays;
+
 public class FindDuplicate {
 	public int findDuplicate(int[] nums) {
 		// 第一階段：檢測環
@@ -41,6 +43,10 @@ public class FindDuplicate {
 		System.out.println("\n測試案例 3:");
 		System.out.println("輸入陣列: " + arrayToString(nums3));
 		System.out.println("重複的數字是: " + solution.findDuplicate(nums3));
+		
+		int[] num = {1,2,3};
+		int a = Arrays.stream(num).min().getAsInt();
+		System.out.println(a);
 	}
 
 	// 輔助方法：將陣列轉換為字串
