@@ -17,7 +17,7 @@ public class TaskScheduler {
 
         // maxHeap will pick the most frequent task
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder()); // maxHeap
-        maxHeap.addAll(freqMap.values()); // Adds all frequencies to the maxHeap
+        maxHeap.addAll(freqMap.values()); 
 
         Queue<int[]> cooldown = new LinkedList<>(); // To store cooldown time, Format: [nextAvailableTime, frequency]
         int time = 0; // To calculate total time
