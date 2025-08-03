@@ -122,12 +122,5 @@ public class LRUCacheTest {
         System.out.println("get(1) = " + cache2.get(1)); // 應該返回 100
         System.out.println();
     }
-    
-    // 輔助方法: 顯示快取狀態 (僅用於除錯，實際的 LRUCache 類別中沒有此方法)
-    private static void printCacheState(LRUCache cache, String description) {
-        System.out.println("=== " + description + " ===");
-        // 注意：實際實作中通常不會提供此方法，這裡僅用於演示
-        System.out.println();
-    }
 }
 
